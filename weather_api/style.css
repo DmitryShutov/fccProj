@@ -1,0 +1,20 @@
+html {
+    background-color: #03a9f4;
+   
+}
+
+.display {
+    width: 50%;
+    margin: auto;    
+    text-align: center;
+}
+
+.loc, .app  {
+    margin-top: 70px;
+    font: Verdana;
+    font-size: 56px;
+}
+.forecast {
+    font: Verdana;
+    font-size: 48px;
+}
