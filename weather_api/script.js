@@ -10,7 +10,9 @@ window.onload = function() {
     if(xhr.status != 200) {
          alert( xhr.status + ': ' + xhr.statusText );
     } else {
-        alert( xhr.responseText);
+         var response = JSON.parse(xhr.responseText);
+         document.querySelector('.loc').innerHTML = response.name;
+         document.querySelector('.forecast').innerHTML = (response.main.temp - 273)&ordm + "C";
     }
 });   
      
