@@ -12,10 +12,22 @@ window.onload = function() {
     } else {
          var response = JSON.parse(xhr.responseText);
          document.querySelector('.loc').innerHTML = response.name;
-         document.querySelector('.forecast').innerHTML = (response.main.temp - 273)&ordm + "C";
+         var tempInCelsius = response.main.temp - 273;
+         document.querySelector('.forecast').innerHTML = (tempInCelsius)&ordm + "C";
     }
 });   
-     
+var temp = 'celsius';
+var scale = document.getElementsByClassName('forecast');
+scale.addEventListener('click', function () {
+    if(temp == 'celsius') {
+        temp = 'phar';
+        var tempInPhar = (response.main.temp + 459.67)/1.8;
+        scale.innerHTML = tempInPhar + '&ordm; P';
+    } else {
+        temp = 'celsius';
+        scale.innerHTML = 
+    }
+})    
 };
 
 
